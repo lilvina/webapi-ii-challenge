@@ -58,7 +58,7 @@ router.put('/:id', (req, res) => {
   const {id} = req.params
   const changes = req.body
 
-  if(changes.title && changes.content) {
+  if(changes.title && changes.contents) {
     db.update(id, changes).then(post => {
       if(post) {
         res.status(200).json(post)
